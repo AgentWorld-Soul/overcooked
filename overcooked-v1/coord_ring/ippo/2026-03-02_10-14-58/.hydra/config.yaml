@@ -1,0 +1,57 @@
+task:
+  ENV_NAME: overcooked-v1
+  ROLLOUT_LENGTH: 400
+  ENV_KWARGS:
+    layout: coord_ring
+    random_obj_state: true
+    do_reward_shaping: true
+    reward_shaping_params:
+      PLACEMENT_IN_POT_REW: 0.5
+      PLATE_PICKUP_REWARD: 0.1
+      SOUP_PICKUP_REWARD: 1.0
+      ONION_PICKUP_REWARD: 0.1
+      COUNTER_PICKUP_REWARD: 0
+      COUNTER_DROP_REWARD: 0
+  TASK_NAME: overcooked-v1/coord_ring
+algorithm:
+  ALG: ippo
+  TOTAL_TIMESTEPS: 3000000.0
+  ACTOR_TYPE: mlp
+  NUM_CHECKPOINTS: 5
+  GAMMA: 0.99
+  GAE_LAMBDA: 0.95
+  VF_COEF: 0.5
+  MAX_GRAD_NORM: 1.0
+  ANNEAL_LR: true
+  LR: 0.001
+  NUM_ENVS: 8
+  UPDATE_EPOCHS: 15
+  NUM_MINIBATCHES: 16
+  CLIP_EPS: 0.1
+  ENT_COEF: 0.05
+  NUM_SEEDS: 5
+  TRAIN_SEED: 39852
+  ENV_NAME: ${ENV_NAME}
+  ENV_KWARGS: ${ENV_KWARGS}
+  ROLLOUT_LENGTH: ${ROLLOUT_LENGTH}
+ENV_NAME: ${task.ENV_NAME}
+ENV_KWARGS: ${task.ENV_KWARGS}
+ROLLOUT_LENGTH: ${task.ROLLOUT_LENGTH}
+TASK_NAME: ${task.TASK_NAME}
+label: val_teammates
+name: ${TASK_NAME}/${algorithm.ALG}/${label}
+logger:
+  project: aht-benchmark
+  entity: aht-project
+  tags:
+  - ${algorithm.ALG}
+  - ${TASK_NAME}
+  - seed=${algorithm.TRAIN_SEED}
+  - ${label}
+  mode: online
+  verbose: false
+  log_train_out: true
+  log_eval_out: true
+local_logger:
+  save_train_out: true
+  save_eval_out: true
