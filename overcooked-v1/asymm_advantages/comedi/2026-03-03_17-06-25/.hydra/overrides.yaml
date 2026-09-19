@@ -1,0 +1,8 @@
+- algorithm=comedi/overcooked-v1/asymm_advantages
+- task=overcooked-v1/asymm_advantages
+- label=val_teammates
+- algorithm.NUM_SEEDS=3
+- algorithm.TRAIN_SEED=39852
+- train_ego=false
+- run_heldout_eval=false
+- logger.mode=online

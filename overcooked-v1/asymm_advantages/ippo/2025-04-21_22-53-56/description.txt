@@ -1,0 +1,2 @@
+All seeds learn a convention where the left agent only plates the soup and sends, and the right agent only puts onions in the pot
+Seed 2 might be slightly “lower skilled” than the 1st two.
