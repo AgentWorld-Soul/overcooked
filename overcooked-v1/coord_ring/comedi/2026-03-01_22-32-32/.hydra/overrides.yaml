@@ -1,0 +1,7 @@
+- algorithm=comedi/overcooked-v1/coord_ring
+- task=overcooked-v1/coord_ring
+- label=val_teammates
+- algorithm.NUM_SEEDS=5
+- algorithm.TRAIN_SEED=39852
+- train_ego=false
+- logger.mode=online
