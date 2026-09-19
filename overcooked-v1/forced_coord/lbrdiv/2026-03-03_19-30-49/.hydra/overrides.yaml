@@ -1,0 +1,8 @@
+- algorithm=lbrdiv/overcooked-v1/forced_coord
+- task=overcooked-v1/forced_coord
+- label=val_teammates
+- algorithm.NUM_SEEDS=3
+- algorithm.TRAIN_SEED=39852
+- train_ego=false
+- run_heldout_eval=false
+- logger.mode=online
