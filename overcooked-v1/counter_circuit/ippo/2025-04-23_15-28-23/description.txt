@@ -1,0 +1,5 @@
+- a team of IPPO agents that passes onions across the counter to complete dishes. 
+- trained in setting with random-reset=false, random_obj_states=false.
+- achieves 160 reward in setting with random_reset=true/false, random_obj_states=false.
+- this particular team cannot cooperate well if you turn random_obj_states=true, but it should 
+be possible to learn a teammate policy that can cooperate well with it. 
