@@ -1,0 +1,8 @@
+[2025-04-23 20:25:29,352][BRDiv][INFO] - Starting BRDiv training...
+[2025-04-23 20:40:12,810][BRDiv][INFO] - BRDiv training complete in 883.4581370353699 seconds
+[2025-04-23 20:40:33,096][train_ego][INFO] - Starting ego agent training...
+[2025-04-23 20:54:45,568][train_ego][INFO] - Ego agent training completed in 852.47 seconds
+[2025-04-23 20:54:51,464][evaluation.agent_loader_from_config][WARNING] - Error interpreting agent_config['idx_list'] as OmegaConf object: Input cfg is not an OmegaConf config object (list). Treating as list.
+[2025-04-23 20:54:52,140][evaluation.agent_loader_from_config][INFO] - Loaded ippo_mlp checkpoint where leaf 0 has shape (3, 64).  Selecting indices [0, 1, 2] for evaluation.
+[2025-04-23 20:54:54,370][evaluation.agent_loader_from_config][WARNING] - Error interpreting agent_config['idx_list'] as OmegaConf object: Input cfg is not an OmegaConf config object (list). Treating as list.
+[2025-04-23 20:54:55,072][evaluation.agent_loader_from_config][INFO] - Loaded brdiv-conf1 checkpoint where leaf 0 has shape (4, 64).  Selecting indices [0, 1, 2, 3] for evaluation.
